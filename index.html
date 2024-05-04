@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenère Cipher</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.5/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+</head>
+<body class="bg-purple-500 h-screen flex flex-col justify-center items-center ">
+    <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg bg-gray-100">
+        <h1 class="text-3xl font-bold mb-4 text-center">Vigenère Cipher Encryption</h1>
+        
+        <!--Plaintext input-->
+        <textarea id="plaintext" class="textarea textarea-info w-full p-2 mb-4 border rounded" rows="4" placeholder="Enter text to encrypt"></textarea>
+
+        <!--File input-->
+        <input type="file" id="fileInput" accept=".txt" class="file-input file-input-bordered file-input-info w-full p-2 mb-4 border rounded">
+
+        <!--Key Input-->
+        <input type="text" id="key" class="w-full p-2 mb-4 border rounded" placeholder="Enter encryption key">
+
+        <!--Encryption Button-->
+        <button onclick="encrypt()" class="btn btn-success w-full text-white font-bold py-2 px-4 rounded">Encrypt</button>
+
+        <!--Encrypted Text-->
+        <textarea id="ciphertext" class="textarea textarea-success w-full p-2 mt-4 border rounded" rows="4" placeholder="Encrypted text will appear here" readonly></textarea>
+
+        <!--Reset textinput fields-->
+        <button onclick="resetForm()" class="w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4">Reset</button>
+
+        <footer class="text-center text-gray-400 mt-4">
+            Created by Raymart Gutera & Gwen Portosa &copy; 2024
+        </footer>
+    </div>
+
+    <script src="vigenere.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>
